@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-cd-image;application/x-iso;application/x-mdf;application/x-nrg;application/x-iso9660-image;
+Icon=application-x-cd-image
+Actions=mountiso;unmountiso;
+X-KDE-Submenu=Mount/unmount CD image
+TryExec=fuseiso
+
+[Desktop Action mountiso]
+Name=Mount and open CD image
+Icon=emblem-mounted
+Exec=if [ ! -d "$HOME/media" ]; then mkdir "$HOME/media"; cp "/usr/share/kde4/apps/kde-service-menu-fuseiso/media.directory" "$HOME/media/.directory"; fi; fuseiso -p "%F" "$HOME/media/`basename "%F"`"; kde-open "$HOME/media/`basename "%F"`"
+
+[Desktop Action unmountiso]
+Name=Unmount CD image
+Icon=emblem-unmounted
+Exec=fusermount -u "$HOME/media/`basename "%F"`"

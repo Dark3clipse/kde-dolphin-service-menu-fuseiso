@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Icon=application-x-cd-image
+Actions=unmountisodir;
+TryExec=fuseiso
+
+[Desktop Action unmountisodir]
+Name=Unmount CD image mounted here
+Icon=emblem-unmounted
+Exec=fusermount -u "%F"

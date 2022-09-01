@@ -1,0 +1,11 @@
+kde-service-menu-fuseiso (0.2) RELEASED; urgency=low
+
+  * Add quotes to support filenames using eg. spaces.
+
+ -- Andreas Wenning <awen@awen.dk>  Wed, 24 Feb 2010 00:14:09 +0100
+
+kde-service-menu-fuseiso (0.1) RELEASED; urgency=low
+
+  * Initial release.
+
+ -- Andreas Wenning <awen@awen.dk>  Sat, 13 Feb 2010 18:09:22 +0100
